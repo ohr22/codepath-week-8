@@ -3,10 +3,20 @@
 Time spent: hours total
 
 
-Blue
-![](SQLi.gif)
-
-Red
+##Blue
+Session Hijacking
 
 
-Green
+SQLinjection
+
+
+##Red
+IDOR
+
+CSRF
+
+##Green
+
+XSS
+
+User Enumeration
