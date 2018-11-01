@@ -20,18 +20,22 @@ This resulted in a 5 second delay before displaying Daron Burke's information.
 
 ### IDOR
 ![idor](https://user-images.githubusercontent.com/40126473/47613450-01695600-da66-11e8-898c-994192309d5f.gif)
-
+I first logged in and got the admin’s list of salespeople. It included some people who weren’t supposed to be on the list of salespeople publically, such as Lazy Lazyman who was fired for stealing. After clicking on show, I saw that his ID was 11. I then logged out of the admin account, looked through the publically available salespeople list, and tried to look for Lazy Lazyman, but he was not available. I clicked on a different salesman (Daron Burke)’s profile and changed the URL so the ID would be set to 11. Then I was able to view Lazy Lazyman’s profile, even though it’s not supposed to be accessible to non-admins.
 
 
 ### CSRF
 ![csrf](https://user-images.githubusercontent.com/40126473/47613455-0cbc8180-da66-11e8-8e11-eec6fc023c57.gif)
+I created an HTML file that would load a Ken Barker file with changed info. His last name would appear as Maybe not and his phone number would appear as 123-456-789. His email would appear as under_attack_really@gmail.com if the attack is successful. I submitted a contact form and the feedback was just the link to the file file:///Users/oliviaryu/Documents/rumours_imy.html. Prior to opening this page, I saw the un-updated salespeople list. Ken Barker appeared normal. After checking feedback, I opened the previous html file I had created. Then I went back to check Ken Barker’s profile. It was changed. 
 
 
 ## Green
 
 ### XSS
 ![cross-site scripting](https://user-images.githubusercontent.com/40126473/47613456-16de8000-da66-11e8-9c7d-2da1edbdd81f.gif)
+I submitted a contact form and used the given code: <script>alert('Olivia found the XSS!');</script> as the feedback. Once I logged in as the admin and accessed the feedback page, I got the message Olivia found the XSS!
 
 
 ### User Enumeration
 ![usernameenumeration](https://user-images.githubusercontent.com/40126473/47613459-21991500-da66-11e8-945e-193e4fa9c92c.gif)
+I tried different usernames, both valid and invalid ones.
+The valid ones resulted in a bolded error message, while the invalid ones resulted in normal text. This is a vulnerability because if an attacker realizes that the usernames that resulted in bolded error messages were valid ones, they would target that specific username and try to find its corresponding password until they find it. 
