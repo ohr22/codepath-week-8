@@ -25,6 +25,8 @@ I first logged in and got the admin’s list of salespeople. It included some pe
 
 ### CSRF
 ![csrf](https://user-images.githubusercontent.com/40126473/47613455-0cbc8180-da66-11e8-8e11-eec6fc023c57.gif)
+![csrfpart2](https://user-images.githubusercontent.com/40126473/47955498-6a256680-df6f-11e8-92db-d9e5eb337a3f.gif)
+
 I created an HTML file that would load a Ken Barker file with changed info. His last name would appear as Maybe not and his phone number would appear as 123-456-789. His email would appear as under_attack_really@gmail.com if the attack is successful. I submitted a contact form and the feedback was just the link to the file file:///Users/oliviaryu/Documents/rumours_imy.html. Prior to opening this page, I saw the un-updated salespeople list. Ken Barker appeared normal. After checking feedback, I opened the previous html file I had created. Then I went back to check Ken Barker’s profile. It was changed. 
 
 
